@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="header col-12">
+    <div class="row">
+      <div class="col-12 d-flex">
+        <button class="col-1" (click)="decreaseMonth()">-</button>
+        <div class="monthHeader d-flex align-items-center justify-content-center">
+          <span> {{ month }} </span>
+        </div>
+        <button class="col-1" (click)="increaseMonth()">+</button>
+      </div> 
+    </div>
+    <div class="row d-flex">
+      <div  class="day" *ngFor="let day of weekDay">
+        <span> {{ day }} </span>
+      </div>
+    </div>
+  </div>
+  <div class="body col-12">
+    <div class="row" *ngFor="let row of [0,1,2,3,4,5]">
+      <app-card 
+        *ngFor="let weekDay of [0,1,2,3,4,5,6]"
+        class="card"
+        [week]=row
+        [day]=weekDay>
+      </app-card>
+    </div>
+  </div>
+</div>

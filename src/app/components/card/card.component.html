@@ -1,0 +1,23 @@
+<div 
+  class="cardContainer" 
+  *ngIf="week <= totalWeeks"
+  [ngClass]="{'--faded': !!!dayNumber}">
+  <div 
+    class="card"  
+    data-toggle="modal" 
+    data-target="#modalInsert"
+    (click)=changeDay(dayNumber)
+    [ngClass]="{'--faded': !!!dayNumber}" >
+    <span class="date" *ngIf="dayNumber !==0"> {{dayNumber}} </span>
+    <app-event-card 
+        *ngIf="dayNumber !==0 && events && events.length > 0"
+        [events]=events>     
+      </app-event-card>
+  </div>
+  <div 
+    class="exclude"     
+    *ngIf="dayNumber !==0 && events && events.length > 0"
+    (click)=deleteEvents()>
+    <img src="https://img.icons8.com/cotton/2x/delete-sign.png" />
+  </div>
+</div>

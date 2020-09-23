@@ -1,0 +1,23 @@
+.cardContainer {
+  cursor:pointer;
+  height: 100px;
+  z-index: 1;
+  .card { 
+    border: none;
+    height: 80px;
+  }
+}
+.--faded  {
+  background-color: gray;
+  cursor: not-allowed;
+}
+.date { width: 90% }
+.exclude {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  img {
+    height: 20px;
+    width: 20px;
+  }
+}

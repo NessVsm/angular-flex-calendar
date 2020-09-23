@@ -1,0 +1,68 @@
+<form id="formInsert" class="formInputs" [formGroup]="form" #formInsert>
+  <div class="form-inline mb-4">  
+    <div class="form-group mb-6">
+      <span class="dateTitle mr-3"> {{day+', '+month}}</span>
+      <select 
+        formControlName="startTime"
+        class="form-control" 
+        id="startTime">
+        <option class="dropdown-item" 
+        *ngFor="let time of timeArray; let j = index">
+          <span> 
+            {{timeArray[j]}} 
+            </span>
+        </option>
+      </select>
+    </div>
+    <div class="form-group mb-6">
+      <select 
+        formControlName="finishTime"
+        class="form-control" 
+        id="finishTime">
+        <option class="dropdown-item" 
+        *ngFor="let time of timeArray; let j = index">
+          <span> 
+            {{timeArray[j]}} 
+            </span>
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="input-group mb-6">
+    <div class="input-group-prepend">
+       <div class="form-group">
+        <select 
+          formControlName="color"
+          class="form-control" 
+          id="colorCode">
+          <option value="" disabled selected>Color...</option>
+          <option 
+           *ngFor="let color of colorArray; let i= index"
+           [value]="color"
+           [ngStyle]="{'background': colorArray[i]}"> {{ colorNamesArray[i] }}</option>
+        </select>
+      </div>
+    </div>
+    <input type="text" 
+      class="form-control" 
+      id="title"
+      formControlName="title"
+      aria-label="Add title"
+      placeholder="Add title"
+      maxlength="30">
+  </div>
+   <div class="form-group py-2">
+      <input 
+      type="type" 
+      class="form-control" 
+      id="city" 
+      formControlName="city"
+      placeholder="Enter city">
+  </div>
+  <div class="weather py-2">
+     <span *ngIf=!weatherForecast> Wanna know the weather? Pick a city!</span>
+     <span class="d-block" *ngIf=weatherForecast>The weather in {{weatherCity}} is </span>
+     <img src={{weatherForecastIcon}} />
+     <span> {{weatherForecast}} </span>
+  </div>
+</form>

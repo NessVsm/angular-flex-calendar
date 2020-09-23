@@ -1,0 +1,15 @@
+.header {
+  .day {
+    text-align: center;
+    width: 14.2%;
+  }
+  .monthHeader {
+    background-color: #dda1ed;
+    height: 40px;
+    width: 100%;
+    span { text-transform: uppercase }
+  }
+}
+.body {
+  .card { width: 14.2% }
+}

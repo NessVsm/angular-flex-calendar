@@ -1,0 +1,6 @@
+<div class="tag d-flex mb-1 tag d-flex mb-1 align-items-center" *ngFor="let event of events" (click)="openEvent(event)">
+  <span class="color mx-1"
+    [ngStyle]="{'background-color': event?.color}"></span>
+  <span class="time mr-1"> {{event?.startTime}} </span>
+  <span class="title"> {{event?.title}} </span>
+</div>

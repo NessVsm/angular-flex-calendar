@@ -1,4 +1,33 @@
 # Angular Calendar
+**First Steps - What do you need**<br />
+To run this project you are gonna need to have installed in your computer the following libraries/tools: <br />
+* git - https://git-scm.com/book/en/v2/Getting-Started-Installing-Git <br />
+* angular cli - https://cli.angular.io/ <br />
+* npm - https://www.npmjs.com/get-npm <br /><br >
+
+**First Steps - How to install**<br />
+
+You should clone this repository into the desired repository on your computer. To do that, you can use a terminal and just type the following command:<br />
+```
+git clone https://github.com/NessVsm/angular-flex-calendar.git
+```
+<br />
+Once the project is downloaded, you should run:
+
+```
+npm install
+```
+<br />
+This command is gonna install all the project dependencies.<br />
+
+
+**First Steps - How to run the project** <br />
+If everything is properly install, you can run:
+```
+ng serve
+```
+This is gonna start the project on the default url http://localhost:4200/
+
 
 **Overview**
 
